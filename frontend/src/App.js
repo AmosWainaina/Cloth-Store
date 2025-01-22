@@ -1,13 +1,18 @@
-import React from 'react'
 
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import SignUpPage from "./components/SignUpPage";
+
+const App = () => {
   return (
-    <div>
-      App
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default App
+export default App;
