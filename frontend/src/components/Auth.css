@@ -4,23 +4,23 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #f4f2f6, #eceef0);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
-  
-  .auth-container {
+}
+
+.auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px;
-  }
-  
-  .auth-card {
+}
+
+.auth-card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,45 +28,45 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
-  }
-  
-  .auth-card h2 {
+}
+
+.auth-card h2 {
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .auth-form {
+}
+
+.auth-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .input-group label {
+}
+
+.input-group label {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .input-group input:focus {
+}
+
+.input-group input:focus {
     outline: none;
     border-color: #6a11cb;
     box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
-  }
-  
-  .auth-button {
+}
+
+.auth-button {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: #fff;
     padding: 10px;
@@ -75,24 +75,55 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
-  }
-  
-  .auth-button:hover {
+}
+
+.auth-button:hover {
     opacity: 0.9;
-  }
-  
-  .auth-footer {
+}
+
+.auth-footer {
     margin-top: 20px;
     font-size: 14px;
-  }
-  
-  .auth-footer a {
+}
+
+.auth-footer a {
     color: #6a11cb;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .auth-footer a:hover {
+}
+
+.auth-footer a:hover {
     text-decoration: underline;
-  }
-  
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other content */
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}

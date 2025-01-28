@@ -1,5 +1,6 @@
 import React from 'react';
-import '../index.css'; // 
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import '../index.css'; 
 
 const Header = () => {
     return (
@@ -9,10 +10,10 @@ const Header = () => {
             </div>
             <nav>
                 <ul className="nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li className="cart-icon"><a href="#">🛒 Cart</a></li>
+                    <li><Link to="/">Home</Link></li>  {}
+                    <li><Link to="/shop">Shop</Link></li>  {}
+                    <li><Link to="/login">Login</Link></li>  {}
+                    <li className="cart-icon"><Link to="/cart">🛒 Cart</Link></li>  {}
                 </ul>
             </nav>
         </header>
