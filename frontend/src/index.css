@@ -59,9 +59,6 @@
     font-size: 20px;
 }
 
-
-
-
 .main-container {
     display: flex;
     justify-content: space-between;
@@ -70,7 +67,6 @@
     margin: 40px auto;
     gap: 20px;
 }
-
 
 .box {
     width: 45%;
@@ -99,7 +95,6 @@
     transform: scale(1.05);
     border-color: #f4b400;
 }
-
 
 footer {
     background-color: #222;
