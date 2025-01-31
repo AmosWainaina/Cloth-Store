@@ -1,13 +1,15 @@
 import React from 'react';
+import ShopPage from '../components/ShopPage';
+
+
+
 
 const Shop = () => {
-  return (
-    <div>
-      <h1>Shop Page</h1>
-      <p>Explore our latest fashion collection.</p>
-    </div>
-  );
+    return (
+        <div>
+            <ShopPage/>
+        </div>
+    );
 };
 
 export default Shop;
-
