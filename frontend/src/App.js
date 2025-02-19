@@ -6,6 +6,7 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import "https://kit.fontawesome.com/ab71cfecb1.js";
 
 
 
