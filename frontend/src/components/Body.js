@@ -19,16 +19,18 @@ const Body = () => {
                 </div>
             </div>
 
+            
+
             <div class="services">
-            <div class="container">
-                <h1 class="sub-title">Why Choose Us</h1>
-                    <div class="services-list">
-                        <div>
+               <div class="container">
+                  <h1 class="sub-title">Why Choose Us</h1>
+                     <div class="services-list">
+                         <div>
                             <i class="fa-solid fa-truck-fast"></i>
                             <h2>Shipping</h2>
                             <p>Free shipping on all orders over $50,and arrival within 3-5 business days</p>
                             
-                        </div>
+                         </div>
     
                         <div>
                             <i class="fa-solid fa-receipt"></i>
@@ -44,8 +46,11 @@ const Body = () => {
                             
                         </div>
                     </div>
-            </div>
-        </div>
+              </div>
+          </div>
+
+          
+
 
             
         </div>
