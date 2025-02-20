@@ -8,7 +8,7 @@ import '../index.css';
 
 const Body = () => {
     return (
-        <div>
+     <div>
                 {/* Hero Section with Curved Background */}
                 <div className="relative bg-white py-16 px-8 overflow-hidden">
                     {/* Curved Background Effect */}
@@ -29,11 +29,10 @@ const Body = () => {
                                 </div>
                             </div>
                         </div>
-                      </div>
-                     </div>
 
+                        
                             {/* Right Side - Text Content */}
-                         <div className="w-full md:w-1/2 z-10">
+                            <div className="w-full md:w-1/2 z-10">
                                 <p className="text-green-500 uppercase tracking-widest font-semibold text-sm">
                                     Best Brand Cloth Shop
                                 </p>
@@ -44,6 +43,9 @@ const Body = () => {
                                 </h1>
                             </div>
         
+                    </div>
+             </div>
+
                        
 
          
@@ -71,12 +73,11 @@ const Body = () => {
                                     <p>Extended warranty on all products, 30-day money-back guarantee.</p>
                                 </div>
                         
-                                  </div>
-                             </div>
-                        </div>
-                    </div>
+                         </div>
+                     </div>
                  </div>
-
+                
+                
 
 
             {/* Shop by Category Section */}
