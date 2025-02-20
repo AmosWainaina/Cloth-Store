@@ -44,7 +44,116 @@ const Body = () => {
                 </div>
             </div>
 
+            {/* Why Choose Us Section */}
+            <div className="services py-16 bg-gray-50">
+                <div className="container max-w-6xl mx-auto text-center">
+                    <h1 className="sub-title text-3xl font-bold">Why Choose Us</h1>
+                    <div className="services-list flex flex-wrap justify-center gap-8 mt-8">
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-truck-fast text-3xl text-blue-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Shipping</h2>
+                            <p>Free shipping on all orders over $50, and arrival within 3-5 business days.</p>
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-receipt text-3xl text-green-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Availability</h2>
+                            <p>Available 24/7, 365 days a year, with new products added daily.</p>
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-medal text-3xl text-yellow-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Warranty</h2>
+                            <p>Extended warranty on all products, 30-day money-back guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             {/* Shop by Category Section */}
+            <div className="Products py-16">
+                <div className="container max-w-6xl mx-auto text-center">
+                    <h1 className="sub-title text-3xl font-bold">Shop by Category</h1>
+                    <div className="services-list flex flex-wrap justify-center gap-8 mt-8">
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <h2 className="text-xl font-semibold">Women</h2>
+                            <img src={img5} alt="Women Fashion" className="rounded-lg mt-4" />
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <h2 className="text-xl font-semibold">Men</h2>
+                            <img src={img6} alt="Men Fashion" className="rounded-lg mt-4" />
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <h2 className="text-xl font-semibold">Unisex</h2>
+                            <img src={img7} alt="Unisex Fashion" className="rounded-lg mt-4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services">
+            <div class="container">
+                <h1 class="sub-title">Why Choose Us</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h2>Shipping</h2>
+                            <p>Free shipping on all orders over $50,and arrival within 3-5 business days</p>
+                            
+                        </div>
+    
+                        <div>
+                            <i class="fa-solid fa-receipt"></i>
+                            <h2>Availability</h2>
+                            <p>Available to you 24/7,365 days a year,With new products added daily</p>
+                            
+                        </div>
+    
+                        <div>
+                             <i class="fa-solid fa-medal"></i>
+                            <h2>Waranty</h2>
+                            <p>Extended warranty on all products,30 days money back guarantee</p>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+            
+
+            <div class="services">
+               <div class="container">
+                  <h1 class="sub-title">Why Choose Us</h1>
+                     <div class="services-list">
+                         <div>
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h2>Shipping</h2>
+                            <p>Free shipping on all orders over $50,and arrival within 3-5 business days</p>
+                            
+                         </div>
+    
+                        <div>
+                            <i class="fa-solid fa-receipt"></i>
+                            <h2>Availability</h2>
+                            <p>Available to you 24/7,365 days a year,With new products added daily</p>
+                            
+                        </div>
+    
+                        <div>
+                             <i class="fa-solid fa-medal"></i>
+                            <h2>Waranty</h2>
+                            <p>Extended warranty on all products,30 days money back guarantee</p>
+                            
+                        </div>
+                    </div>
+              </div>
+          </div>
+
+          
+
 <div className="Products py-16">
     <div className="container max-w-6xl mx-auto text-center">
         <h1 className="sub-title text-3xl font-bold">Shop by Category</h1>
@@ -91,6 +200,9 @@ const Body = () => {
 
 
         </div>
+        
+        
+       
     );
 };
 
