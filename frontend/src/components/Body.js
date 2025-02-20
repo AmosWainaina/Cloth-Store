@@ -41,6 +41,7 @@ const Body = () => {
                             <span className="text-blue-500">Taste</span> Come to Visual.
                         </h1>
                     </div>
+
                 </div>
             </div>
 
@@ -69,6 +70,37 @@ const Body = () => {
                     </div>
                 </div>
             </div>
+
+
+                </div>
+            </div>
+
+            {/* Why Choose Us Section */}
+            <div className="services py-16 bg-gray-50">
+                <div className="container max-w-6xl mx-auto text-center">
+                    <h1 className="sub-title text-3xl font-bold">Why Choose Us</h1>
+                    <div className="services-list flex flex-wrap justify-center gap-8 mt-8">
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-truck-fast text-3xl text-blue-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Shipping</h2>
+                            <p>Free shipping on all orders over $50, and arrival within 3-5 business days.</p>
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-receipt text-3xl text-green-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Availability</h2>
+                            <p>Available 24/7, 365 days a year, with new products added daily.</p>
+                        </div>
+
+                        <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
+                            <i className="fa-solid fa-medal text-3xl text-yellow-500"></i>
+                            <h2 className="text-xl font-semibold mt-4">Warranty</h2>
+                            <p>Extended warranty on all products, 30-day money-back guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
             {/* Shop by Category Section */}
@@ -154,6 +186,7 @@ const Body = () => {
 
           
 
+
 <div className="Products py-16">
     <div className="container max-w-6xl mx-auto text-center">
         <h1 className="sub-title text-3xl font-bold">Shop by Category</h1>
@@ -197,6 +230,7 @@ const Body = () => {
         </div>
     </div>
 </div>
+
 
 
         </div>
