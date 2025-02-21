@@ -41,8 +41,11 @@ const Body = () => {
                             <span className="text-blue-500">Taste</span> Come to Visual.
                         </h1>
                     </div>
+
                 </div>
             </div>
+
+           
 
             {/* Why Choose Us Section */}
             <div className="services py-16 bg-gray-50">
@@ -71,6 +74,7 @@ const Body = () => {
             </div>
 
 
+
             {/* Shop by Category Section */}
             <div className="Products py-16">
                 <div className="container max-w-6xl mx-auto text-center">
@@ -87,7 +91,7 @@ const Body = () => {
                         </div>
 
                         <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
-                            <h2 className="text-xl font-semibold">Unisex</h2>
+                            <h2 className="text-xl font-semibold">All Category</h2>
                             <img src={img7} alt="Unisex Fashion" className="rounded-lg mt-4" />
                         </div>
                     </div>
@@ -95,6 +99,8 @@ const Body = () => {
             </div>
 
             
+
+
 
         </div>
         
