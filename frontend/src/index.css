@@ -208,3 +208,87 @@ footer {
     color: #888;
 }
 
+/* shop section */
+.shop-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+ 
+  
+  /* Grid container */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Card styles */
+  .shop-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .shop-card:hover {
+    border-color: #00babc; /* Example hover color */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shop-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Product details */
+  .shop-details {
+    padding: 1rem;
+  }
+  
+  .shop-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .shop-price-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  
+  .shop-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00babc; /* Example brand color */
+  }
+  
+  .shop-rating {
+    color: #ffc107; /* Star color (gold) */
+  }
+  
+  /* Add to cart button */
+  .shop-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #00babc;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top: 1px solid #ddd;
+  }
+  
+  .shop-button:hover {
+    background-color: #01969a;
+  }
+  

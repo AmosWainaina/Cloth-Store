@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from '../Assets/img1.png.jpg';
-import img2 from '../Assets/img2.png.jpg';
+import img14 from '../Assets/img2.png.jpg';
 import img5 from '../Assets/img5.png.jpg';
 import img6 from '../Assets/img6.png.jpg';
 import img7 from '../Assets/img7.png.jpg';
@@ -20,7 +20,7 @@ const Body = () => {
                     <div className="w-full md:w-1/2">
                         <div className="main-container">
                             <div className="box left">
-                                <img src={img2} alt="Latest Trendy Styles for Men" />
+                                <img src={img14} alt="Latest Trendy Styles for Men" />
                                 <p>Latest Trendy Styles for Men</p>
                             </div>
                             <div className="box right">
