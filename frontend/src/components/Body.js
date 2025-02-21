@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from '../Assets/img1.png.jpg';
-import img2 from '../Assets/img2.png.jpg';
+import img14 from '../Assets/img2.png.jpg';
 import img5 from '../Assets/img5.png.jpg';
 import img6 from '../Assets/img6.png.jpg';
 import img7 from '../Assets/img7.png.jpg';
@@ -9,41 +9,45 @@ import '../index.css';
 const Body = () => {
     return (
         <div>
-                {/* Hero Section with Curved Background */}
-                <div className="relative bg-white py-16 px-8 overflow-hidden">
-                    {/* Curved Background Effect */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-100 rounded-l-full"></div>
-    
-                    {/* Image & Text Section */}
-                    <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center">
-                        {/* Left Side - Images */}
-                        <div className="w-full md:w-1/2">
-                            <div className="main-container">
-                                <div className="box left">
-                                    <img src={img2} alt="Latest Trendy Styles for Men" />
-                                    <p>Latest Trendy Styles for Men</p>
-                                </div>
-                                <div className="box right">
-                                    <img src={img1} alt="Elegant & Stylish Women's Collection" />
-                                    <p>Elegant & Stylish Women's Collection</p>
-                                </div>
+
+            {/* Hero Section with Curved Background */}
+            <div className="relative bg-white py-16 px-8 overflow-hidden">
+                {/* Curved Background Effect */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-100 rounded-l-full"></div>
+
+                {/* Image & Text Section */}
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+                    {/* Left Side - Images */}
+                    <div className="w-full md:w-1/2">
+                        <div className="main-container">
+                            <div className="box left">
+                                <img src={img14} alt="Latest Trendy Styles for Men" />
+                                <p>Latest Trendy Styles for Men</p>
+                            </div>
+                            <div className="box right">
+                                <img src={img1} alt="Elegant & Stylish Women's Collection" />
+                                <p>Elegant & Stylish Women's Collection</p>
                             </div>
                         </div>
-                      </div>
-                     </div>
+                    </div>
 
-                            {/* Right Side - Text Content */}
-                         <div className="w-full md:w-1/2 z-10">
-                                <p className="text-green-500 uppercase tracking-widest font-semibold text-sm">
-                                    Best Brand Cloth Shop
-                                </p>
-                                <h1 className="text-4xl font-extrabold text-black leading-tight mt-2">
-                                    We Bring in products <br />
-                                    that make people's{" "}
-                                    <span className="text-blue-500">Taste</span> Come to Visual.
-                                </h1>
-                            </div>
-        
+                    {/* Right Side - Text Content */}
+                    <div className="w-full md:w-1/2 z-10">
+                        <p className="text-green-500 uppercase tracking-widest font-semibold text-sm">
+                            Best Brand Cloth Shop
+                        </p>
+                        <h1 className="text-4xl font-extrabold text-black leading-tight mt-2">
+                            We Bring in products <br />
+                            that make people's{" "}
+                            <span className="text-blue-500">Taste</span> Come to Visual.
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+
+           
+
                        
 
          
@@ -73,9 +77,9 @@ const Body = () => {
                         
                                   </div>
                              </div>
+
                         </div>
-                    </div>
-                 </div>
+                    
 
 
 
@@ -95,12 +99,14 @@ const Body = () => {
                         </div>
 
                         <div className="max-w-xs bg-white p-6 rounded-lg shadow-md">
-                            <h2 className="text-xl font-semibold">Unisex</h2>
+                            <h2 className="text-xl font-semibold">All Category</h2>
                             <img src={img7} alt="Unisex Fashion" className="rounded-lg mt-4" />
                         </div>
                     </div>
                 </div>
             </div>
+
+            
 
           
 
