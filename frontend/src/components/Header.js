@@ -8,8 +8,10 @@ const Header = () => {
       <div className="flex items-center space-x-2">
         <span className="text-green-500 text-4xl font-bold">⚡</span>
         <div>
-          <h1 className="text-black font-bold text-xl">Fashion</h1>
-          <p className="text-gray-500 text-sm -mt-1">Store</p>
+          <h1 className="text-black font-bold text-xl">Fashion Store</h1>
+
+        <p className="text-gray-500 text-sm -mt-1">Taste comes to visual</p>
+
         </div>
       </div>
 
@@ -29,7 +31,8 @@ const Header = () => {
       </nav>
 
       {/* CTA Button */}
-      <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-6 py-2 rounded-full shadow-md hover:opacity-90 transition">
+      <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-6 py-2 rounded-full shadow-md hover:opacity-90 transition" aria-label="Free Consultation">
+
         Free Consultation
       </button>
     </header>
