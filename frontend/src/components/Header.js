@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <header className="bg-white shadow-lg p-4 rounded-full flex justify-between items-center mx-8 my-4">

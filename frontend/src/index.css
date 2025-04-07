@@ -292,3 +292,28 @@ footer {
     background-color: #01969a;
   }
   
+  .filter-controls {
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin: 0 10px;
+}
+
+.shop-button {
+    transition: background-color 0.3s;
+}
+
+.shop-button:hover {
+    background-color: #4a5568;
+}
+
+.cart-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
