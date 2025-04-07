@@ -12,6 +12,7 @@ import "https://kit.fontawesome.com/ab71cfecb1.js";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} /> { Home  }
