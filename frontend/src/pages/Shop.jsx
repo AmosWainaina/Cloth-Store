@@ -3,6 +3,7 @@ import ShopPage from '../components/ShopPage';
 
 
 
+
 const Shop = () => {
     return (
         <div>
