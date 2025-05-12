@@ -4,6 +4,7 @@ import Footer from './Footer';
 import emptyCartImg from '../Assets/empty-cart.png';
 import '../index.css';
 
+
 const CartPage = () => {
   
     
