@@ -25,7 +25,7 @@ const products = [
     },
     {
         id: 2,
-        title: 'Product 2',
+        title: 'Beach Wear',
         price: 22,
         image: img2,
         rating: 4,
@@ -33,7 +33,7 @@ const products = [
     },
     {
         id: 3,
-        title: 'Women Blouse',
+        title: 'Top combo',
         price: 35,
         image: img11,
         rating: 5,
@@ -41,7 +41,7 @@ const products = [
     },
     {
         id: 4,
-        title: 'Women Dress',
+        title: 'All Top',
         price: 15,
         image: img8,
         rating: 5,
@@ -49,7 +49,7 @@ const products = [
     },
     {
         id: 5,
-        title: 'Men Jacket',
+        title: 'outdoor',
         price: 45,
         image: img5,
         rating: 5,
@@ -65,7 +65,7 @@ const products = [
     },
     {
         id: 7,
-        title: 'Men Shoes',
+        title: 'Men casual',
         price: 27,
         image: img7,
         rating: 5,
@@ -73,7 +73,7 @@ const products = [
     },
     {
         id: 8,
-        title: 'Women Handbag',
+        title: 'Top Accessory',
         price: 15,
         image: img9,
         rating: 5,
@@ -89,7 +89,7 @@ const products = [
     },
     {
         id: 10,
-        title: 'Men Watch',
+        title: 'Men Elegance',
         price: 37,
         image: img13,
         rating: 5,
@@ -97,7 +97,7 @@ const products = [
     },
     {
         id: 11,
-        title: 'Men Wallet',
+        title: 'Men outdoor',
         price: 32,
         image: img15,
         rating: 5,
