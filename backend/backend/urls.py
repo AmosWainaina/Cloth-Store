@@ -1,23 +1,12 @@
-# settings.py
-INSTALLED_APPS = [
-    # ...
-    'corsheaders',
-]
+from django.contrib import admin
+from django.urls import path, include
+from django.http import HttpResponse
 
-MIDDLEWARE = [
-    # ...
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-]
+def root_view(request):
+    return HttpResponse("Welcome to the Cloth-Store Backend API. Use /api/ for API endpoints or /admin/ for admin panel.")
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Your React dev server
-    "http://your-production-domain.com",
+urlpatterns = [
+    path('', root_view, name='root'),
+    path('admin/', admin.site.urls),
+    path('api/', include('shop.urls')),
 ]
-
-# settings.py
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}

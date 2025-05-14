@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import img1 from '../Assets/img1.png.jpg';
@@ -13,6 +13,7 @@ import img13 from '../Assets/img13.png.jpg';
 import img11 from '../Assets/img11.png.jpg';
 import img15 from '../Assets/img15.png.jpg';
 import '../index.css';
+import api from '../api';
 
 const products = [
     {
@@ -106,12 +107,44 @@ const products = [
 ];
 
 const ShopPage = () => {
-    const [cart, setCart] = useState([]);
+    const [cartId, setCartId] = useState(null);
     const [categoryFilter, setCategoryFilter] = useState('all');
     const [priceFilter, setPriceFilter] = useState('all');
 
-    const addToCart = (product) => {
-        setCart([...cart, product]);
+    useEffect(() => {
+        // Fetch or create cart for the user
+        const fetchCart = async () => {
+            try {
+                const response = await api.get('/cart/');
+                if (response.data.length > 0) {
+                    setCartId(response.data[0].id);
+                } else {
+                    // Create a new cart if none exists
+                    const createResponse = await api.post('/cart/', {});
+                    setCartId(createResponse.data.id);
+                }
+            } catch (error) {
+                console.error('Error fetching or creating cart:', error);
+            }
+        };
+        fetchCart();
+    }, []);
+
+    const addToCart = async (product) => {
+        if (!cartId) {
+            alert('Cart not initialized yet.');
+            return;
+        }
+        try {
+            await api.post(`/cart/${cartId}/add_item/`, {
+                product_id: product.id,
+                quantity: 1,
+            });
+            alert(`${product.title} added to cart`);
+        } catch (error) {
+            console.error('Error adding item to cart:', error);
+            alert('Failed to add item to cart');
+        }
     };
 
     const filteredProducts = products.filter((product) => {
@@ -135,7 +168,7 @@ const ShopPage = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <Header cartCount={cart.length} />
+            <Header cartCount={cartId ? undefined : 0} />
             <section className="shop-section flex-grow">
                 {/* Filter controls */}
                 <div className="filter-controls p-4 bg-gray-100 mb-6 flex flex-wrap gap-4 justify-center">
@@ -162,9 +195,9 @@ const ShopPage = () => {
                             onChange={(e) => setPriceFilter(e.target.value)}
                         >
                             <option value="all">All</option>
-                            <option value="0-50">$0 - 15</option>
-                            <option value="50-100">$16 - $40</option>
-                            
+                            <option value="0-50">$0 - 50</option>
+                            <option value="50-100">$50 - 100</option>
+                            <option value="100+">$100+</option>
                         </select>
                     </div>
                     
