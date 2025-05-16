@@ -127,3 +127,106 @@ body {
     cursor: pointer;
     font-size: 20px;
 }
+
+/* Social Login Styles */
+.social-login-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.facebook-login-button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.facebook-login-button:hover {
+  background-color: #166fe5;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider::before {
+  margin-right: 1rem;
+}
+
+.divider::after {
+  margin-left: 1rem;
+}
+
+/* Password Strength Meter */
+.password-strength-meter {
+  height: 5px;
+  background-color: #eee;
+  margin-top: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.password-feedback {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Terms Checkbox */
+.terms-group {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.terms-group input {
+  margin-right: 10px;
+}
+
+.terms-group label {
+  font-size: 14px;
+}
+
+.terms-group a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.terms-group a:hover {
+  text-decoration: underline;
+}
+
+/* Verification Message */
+.verification-message {
+  text-align: center;
+  padding: 1rem;
+}
+
+.verification-message p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}

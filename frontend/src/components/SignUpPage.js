@@ -1,37 +1,84 @@
 import React, { useState } from "react";
 import "./Auth.css";
+import api from "../api"; // Import your API configuration
+import { useNavigate } from "react-router-dom";
 
-const SignUpPage = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const SignUpPage = ({ onSuccess }) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    password2: "" // For password confirmation
+  });
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
-    // Simulate a signup request
-    try {
-      // Replace with actual API call
-      const response = await fakeSignupApi(fullName, email, password);
-      if (response.success) {
-        // Handle successful signup (e.g., redirect to login)
-      } else {
-        setError("Signup failed. Please try again.");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
+    
+    // Basic validation
+    if (formData.password !== formData.password2) {
+      setError("Passwords don't match");
+      return;
     }
-  };
+    
+    if (formData.password.length < 8) {
+      setError("Password must be at least 8 characters");
+      return;
+    }
 
-  const fakeSignupApi = (fullName, email, password) => {
-    // Simulate an API call
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ success: true });
-      }, 1000);
-    });
+    setIsLoading(true);
+
+    try {
+      const response = await api.post('/auth/register/', {
+        username: formData.email, // Using email as username
+        email: formData.email,
+        password: formData.password,
+        first_name: formData.fullName.split(' ')[0],
+        last_name: formData.fullName.split(' ').slice(1).join(' ') || '', // Handle single name
+      });
+
+      // Automatically log in after successful registration
+      const loginResponse = await api.post('/auth/login/', {
+        email: formData.email,
+        password: formData.password
+      });
+
+      // Store tokens and user data
+      localStorage.setItem('token', loginResponse.data.access);
+      localStorage.setItem('refresh_token', loginResponse.data.refresh);
+      localStorage.setItem('user', JSON.stringify(loginResponse.data.user));
+
+      // Close modal if used as modal, otherwise redirect
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        navigate('/shop');
+      }
+      
+    } catch (err) {
+      console.error('Signup error:', err);
+      if (err.response) {
+        if (err.response.status === 400) {
+          setError(err.response.data.message || "Validation error");
+        } else {
+          setError("Registration failed. Please try again.");
+        }
+      } else {
+        setError("Network error. Please check your connection.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -43,9 +90,10 @@ const SignUpPage = () => {
             <label>Full Name</label>
             <input
               type="text"
+              name="fullName"
               placeholder="Enter your full name"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              value={formData.fullName}
+              onChange={handleChange}
               required
             />
           </div>
@@ -53,9 +101,10 @@ const SignUpPage = () => {
             <label>Email</label>
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={handleChange}
               required
             />
           </div>
@@ -63,15 +112,33 @@ const SignUpPage = () => {
             <label>Password</label>
             <input
               type="password"
-              placeholder="Create a password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              placeholder="Create a password (min 8 characters)"
+              value={formData.password}
+              onChange={handleChange}
               required
+              minLength="8"
+            />
+          </div>
+          <div className="input-group">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              name="password2"
+              placeholder="Confirm your password"
+              value={formData.password2}
+              onChange={handleChange}
+              required
+              minLength="8"
             />
           </div>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="auth-button">
-            Sign Up
+          <button 
+            type="submit" 
+            className="auth-button"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Creating account...' : 'Sign Up'}
           </button>
         </form>
         <p className="auth-footer">
