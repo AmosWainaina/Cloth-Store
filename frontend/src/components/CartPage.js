@@ -8,10 +8,17 @@ import api from '../api';
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartId, setCartId] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCart = async () => {
       try {
+
+         const token = localStorage.getItem('token');
+        if (!token) {
+          setLoading(false);
+          return;
+            }
         const response = await api.get('/cart/');
         if (response.data.length > 0) {
           const cart = response.data[0];

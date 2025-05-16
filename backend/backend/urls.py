@@ -9,4 +9,5 @@ urlpatterns = [
     path('', root_view, name='root'),
     path('admin/', admin.site.urls),
     path('api/', include('shop.urls')),
+    
 ]

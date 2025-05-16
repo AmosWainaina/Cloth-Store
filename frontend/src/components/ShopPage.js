@@ -112,19 +112,28 @@ const ShopPage = () => {
     const [priceFilter, setPriceFilter] = useState('all');
 
     useEffect(() => {
-        // Fetch or create cart for the user
         const fetchCart = async () => {
             try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    console.error('No authentication token found');
+                    return;
+                }
+                
                 const response = await api.get('/cart/');
-                if (response.data.length > 0) {
-                    setCartId(response.data[0].id);
+                if (response.data) {
+                    setCartId(response.data.id);
                 } else {
-                    // Create a new cart if none exists
                     const createResponse = await api.post('/cart/', {});
                     setCartId(createResponse.data.id);
                 }
             } catch (error) {
                 console.error('Error fetching or creating cart:', error);
+                // Handle unauthorized (401) by redirecting to login
+                if (error.response && error.response.status === 401) {
+                    // Redirect to login or show login modal
+                    alert('Please login to add items to cart');
+                }
             }
         };
         fetchCart();
@@ -132,7 +141,7 @@ const ShopPage = () => {
 
     const addToCart = async (product) => {
         if (!cartId) {
-            alert('Cart not initialized yet.');
+            alert('Please login to add items to cart');
             return;
         }
         try {
@@ -143,7 +152,11 @@ const ShopPage = () => {
             alert(`${product.title} added to cart`);
         } catch (error) {
             console.error('Error adding item to cart:', error);
-            alert('Failed to add item to cart');
+            if (error.response && error.response.status === 401) {
+                alert('Please login to add items to cart');
+            } else {
+                alert('Failed to add item to cart');
+            }
         }
     };
 

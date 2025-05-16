@@ -5,6 +5,16 @@ from .models import Product, Cart, CartItem
 from .serializers import ProductSerializer, CartSerializer, CartItemSerializer
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from rest_framework.permissions import IsAuthenticated
+
+class CartViewSet(viewsets.ModelViewSet):
+    serializer_class = CartSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Cart.objects.filter(user=self.request.user)
+
+    # ... rest of your viewset code
 
 # views.py
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
@@ -68,3 +78,4 @@ class CartViewSet(viewsets.ModelViewSet):
             return Response({'message': 'Item removed'}, status=status.HTTP_204_NO_CONTENT)
         except CartItem.DoesNotExist:
             return Response({'error': 'Item not found in cart'}, status=status.HTTP_404_NOT_FOUND)
+
