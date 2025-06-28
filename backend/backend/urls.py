@@ -5,7 +5,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from shop.views import RegisterView
 
 def root_view(request):
-    return HttpResponse("Welcome to the Cloth-Store Backend API. Use /api/ for API endpoints or /admin/ for admin panel.")
+    return HttpResponse("Welcome to the Fashion Store Backend API. Use /api/ for API endpoints or /admin/ for admin panel.")
 
 urlpatterns = [
     path('', root_view, name='root'),
