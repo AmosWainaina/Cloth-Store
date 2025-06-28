@@ -30,6 +30,7 @@ const ShopPage = () => {
     const fetchProducts = async () => {
         try {
             const response = await api.get('/api/products/');
+            console.log('Products fetched:', response.data);
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);

@@ -3,7 +3,7 @@ import img1 from '../Assets/img1.png.jpg';
 import img14 from '../Assets/img2.png.jpg';
 import img5 from '../Assets/img5.png.jpg';
 import img6 from '../Assets/img6.png.jpg';
-import img7 from '../Assets/img7.png.jpg';
+import img7 from '../Assets/img15.png.jpg';
 import '../index.css';
 
 const Body = () => {
