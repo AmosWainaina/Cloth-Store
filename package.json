@@ -1,0 +1,21 @@
+{
+  "name": "fashion-store-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack fashion e-commerce application with React frontend and Django backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && python manage.py runserver",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "migrate": "cd backend && python manage.py migrate",
+    "create-superuser": "cd backend && python manage.py createsuperuser",
+    "seed-data": "cd backend && python create_sample_products.py"
+  },
+  "keywords": ["react", "django", "ecommerce", "fashion", "fullstack"],
+  "author": "Fashion Store Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
