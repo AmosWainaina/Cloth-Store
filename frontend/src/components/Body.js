@@ -198,7 +198,7 @@ const Body = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                             <div className="absolute bottom-6 left-6 text-white">
-                                <h3 className="text-2xl font-bold mb-2">Women's Collection</h3>
+                                <h3 className="text-2xl font-bold mb-2">Men's Collection</h3>
                                 <p className="text-sm opacity-90 mb-4">Elegant and sophisticated styles</p>
                                 <div className="inline-flex items-center text-sm font-medium">
                                     Shop Now <FiArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -216,7 +216,7 @@ const Body = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                             <div className="absolute bottom-6 left-6 text-white">
-                                <h3 className="text-2xl font-bold mb-2">Men's Collection</h3>
+                                <h3 className="text-2xl font-bold mb-2">Women's Collection</h3>
                                 <p className="text-sm opacity-90 mb-4">Modern and trendy designs</p>
                                 <div className="inline-flex items-center text-sm font-medium">
                                     Shop Now <FiArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

@@ -228,10 +228,10 @@ const ShopPage = () => {
                                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
                                 >
                                     <option value="all">All Prices</option>
-                                    <option value="0-50">$0 - $50</option>
-                                    <option value="50-100">$50 - $100</option>
-                                    <option value="100-200">$100 - $200</option>
-                                    <option value="200">$200+</option>
+                                    <option value="0-20">$0 - $20</option>
+                                    <option value="21-40">$21 - $40</option>
+                                    <option value="41-50">$41 - $50</option>
+                                    <option value="51">$51+</option>
                                 </select>
 
                                 <select
