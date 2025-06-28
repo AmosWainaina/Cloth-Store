@@ -134,7 +134,7 @@ const Footer = () => {
                                         href="tel:+1234567890" 
                                         className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
                                     >
-                                        +1 (234) 567-8900
+                                        +254711656218
                                     </a>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@ const Footer = () => {
                                     <p className="text-gray-300">Address</p>
                                     <p className="text-purple-400">
                                         123 Fashion Street<br />
-                                        New York, NY 10001
+                                        Nairobi, NBO 10001
                                     </p>
                                 </div>
                             </div>
