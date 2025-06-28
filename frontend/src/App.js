@@ -35,6 +35,7 @@ function App() {
               draggable
               pauseOnHover
               theme="light"
+              className="mt-16"
             />
           </div>
         </BrowserRouter>
